@@ -12,12 +12,17 @@ do
 done
 
 #Traceroute each file and save that to a new file:
+#On windows tracert is the equivalent command to traceroute
 
 for file in $var_path/servers/*
 do
     name=$(echo ${file##*/})
     echo "doing " $name
-    traceroute -I $name > $name.txt
+	if [[ "$OSTYPE" == "msys"* ]]; then
+		tracert $name > $name.txt
+	else 
+	     traceroute -I $name > $name.txt
+	fi
 done
 
 ls -1 | grep -v 'servers.txt' | cat *.txt > results.txt
