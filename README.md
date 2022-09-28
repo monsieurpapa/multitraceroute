@@ -7,4 +7,4 @@ This script gets a list of servers and traceroute to each and saves results into
 `sh bashtr.sh`
 
 # Sharing with the results
-Email the the results.txt file to `results@multitraceroute.cd`
+Email the the results.txt file to `dieudonneishara@gmail.com`
