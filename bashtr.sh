@@ -4,7 +4,7 @@
  #the info get appended to the final output
 chmod +x bashtr.sh
 list=$(cat "servers.txt")
-var_path=`pwd`
+var_path=$(pwd)
 mkdir -p servers 
 for name in $list
 do
