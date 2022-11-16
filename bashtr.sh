@@ -4,17 +4,16 @@
  #the info get appended to the final output
 chmod +x bashtr.sh
 list=$(cat "servers.txt")
-var_path=$(pwd)
 mkdir -p servers 
 for name in $list
 do
-    echo $name > $var_path/servers/$name
+    echo $name > servers/$name
 done
 
 #Traceroute each file and save that to a new file:
 #On windows tracert is the equivalent command to traceroute
 
-for file in $var_path/servers/*
+for file in servers/*
 do
     name=$(echo ${file##*/})
     echo "doing " $name
